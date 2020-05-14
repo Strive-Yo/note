@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NineActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/BigTextInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="设置手势密码"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/gestureNumInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+
+
+        <com.github.leondevlifelog.gesturelockview.GestureLockView
+            android:id="@+id/customGestureLockView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            app:col="3"
+            app:dot_color="#121212"
+            app:dot_color_pressed="#FF2254A6"
+            app:dot_radius="6dp"
+            app:line_color="#55CCCCCC"
+            app:min_length="1"
+            app:row="3" />
+        app:dot_color="#121212" <!--点的颜色 默认-->
+        app:dot_color_pressed="#FF2254A6"  <!--点被按着的时候的颜色-->
+        app:dot_pressed_radius="6dp"  <!--点被点击的时候显示的区域大小-->
+        app:dot_radius="6dp" <!--点的半径-->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:line_color="#55CCCCCC"    <!--点与点之间线条轨迹的颜色-->
+        app:line_width="12dp"   <!--直线轨迹线宽-->
+        app:min_length="4"    <!--轨迹/密码最小长度-->
+        app:row="4"  <!--点的行数 默认3行-->
+        app:security_mode="false"    <!--是否启用安全模式(不带轨迹)-->
+        app:vibrate="true"    <!--震动开关--> />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
